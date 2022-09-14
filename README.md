@@ -1,31 +1,33 @@
-﻿# Aliyun Log Service PHP SDK
+# Aliyun Log Service PHP SDK
 
-## API VERSION
+## Modify
 
-0.6.2
+~~~ shell
+diff --git a/Aliyun/Log/Client.php b/Aliyun/Log/Client.php
+--- a/Aliyun/Log/Client.php
++++ b/Aliyun/Log/Client.php
+@@ -242,7 +242,7 @@ class Aliyun_Log_Client {
+         $logGroup->setSource ( $source );
+         $logitems = $request->getLogitems ();
+         foreach ( $logitems as $logItem ) {
+-            $log = new Log ();
++            $log = new SlsLog ();^M
+             $log->setTime ( $logItem->getTime () );
+             $content = $logItem->getContents ();
+             foreach ( $content as $key => $value ) {
+             
+             
+diff --git a/Aliyun/Log/sls.proto.php b/Aliyun/Log/sls.proto.php
+--- a/Aliyun/Log/sls.proto.php
++++ b/Aliyun/Log/sls.proto.php
+@@ -126,7 +126,7 @@ class Log_Content {
+ }
+ 
+ // message Log
+-class Log {
++class SlsLog {
+   private $_unknown;
+ 
+   function __construct($in = NULL, &$limit = PHP_INT_MAX) {
 
-## SDK RELEASE TIME
-
-2018-02-18
-
-## Introduction
-
-Log Service SDK for PHP，used to set/get log data to Aliyun Log Service(www.aliyun.com/product/sls).
-
-API Reference: [中文](https://help.aliyun.com/document_detail/29007.html) [ENGLISH](https://www.alibabacloud.com/help/doc-detail/29007.htm)
-
-
-### Summary
-
-1. Request-Request style Restful API interface
-2. Use Protocol buffer to send data 
-3. Data can be compressed when sending to server
-4. Aliyun_Log_Exception will be thrown if any error happen
-5. Introduce simple logger for submit log easily with different levels
-6. Create local log cache to submit several logs in single http post.
-
-## Environment Requirement
-
-1. PHP 7.1.7 and later：Master Branch
-2. PHP 5.2+：[Tree v1.0](https://github.com/aliyun/aliyun-log-php-sdk/tree/v1.0)
-
+~~~
