@@ -1,36 +1,19 @@
 {
-  "readme": "README.md",
-  "type": "library",
-  "description": "The Php SDK of Alibaba log service",
-  "keywords": [
-    "sdk",
-    "sls",
-    "alibaba"
-  ],
-  "require": {
-    "php": ">=7.1.7"
-  },
-  "require-dev": {
-  },
-  "authors": [
-    {
-      "name": "Qi Zhou"
-    },
-    {
-      "name": "TingTao Sun"
-    },
-    {
-      "name": "Leiyun Ma"
-    },
-    {
-      "name": "Xin Zhang"
+    "name": "sugarCYF/aliyun-log-php-sdk",
+    "type": "library",
+    "license": "MIT",
+    "version": "v0.6.1",
+    "authors": [
+        {
+            "name": "sugar",
+            "email": "206615407@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [  
+            "Log_Autoload.php"
+        ]
     }
-  ],
-  "autoload": {
-    "files": [
-      "Log_Autoload.php"
-    ]
-  },
-  "name": "alibabacloud/aliyun-log-php-sdk",
-  "version": "0.6.3"
 }
