@@ -1,5 +1,5 @@
 {
-    "name": "sugarCYF/aliyun-log-php-sdk",
+    "name": "sugar/aliyun-log-php-sdk",
     "type": "library",
     "license": "MIT",
     "version": "v0.6.1",
